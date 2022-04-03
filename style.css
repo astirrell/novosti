@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url("../img/fon.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; */
+    background-color: rgb(226, 242, 250);
+}
+.menu{
+    /* border: 2px solid #0066FF; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: #207a96;
+    width: 100%;
+    
+}
+.menu li{
+    display: inline;
+    margin: 8px;
+}
+
+
+.knopka{
+    text-decoration: none;
+    position: relative;
+    color: black;
+    transition: color .2s linear;
+}
+.knopka::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+
+    background-color: #ff0000;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.knopka:hover{
+    color: #ff0000;
+}
+.knopka:hover:after{
+    display: block;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Open+Sans:wght@300&family=PT+Sans+Narrow&family=Playfair+Display:ital@1&family=Raleway:ital,wght@1,900&family=Roboto:wght@100&family=Shizuru&display=swap');
+.logo{
+    font-family: 'Shizuru', cursive;
+}
+.knopki{
+    text-align: center;
+    font-family: 'Shizuru', cursive;
+    text-decoration: none;
+}
+.link{
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+
+    transition: color .2s linear;
+}
+.link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+
+    background-color: #ff0000;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.link:hover{
+    color: #ff0000;
+}
+.link:hover:after{
+    display: block;
+}
+
+.footer{
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+.main{
+    flex: 1 1 auto;
+    overflow: hidden;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif; 
+    margin-top: 30px;
+
+    justify-content: space-between;
+}
+
+.link_2{
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+
+    transition: color .2s linear;
+}
+.link_2::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+
+    background-color: #ff0000;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.link_2:hover{
+    color: #ff0000;
+}
+.link_2:hover:after{
+    display: block;
+}
+
+
+
+/* .block1{
+    margin-right: auto;
+    margin-top: 80px;
+    height: 100%;
+    width: 420px;
+    border-radius: 10px;
+    border: 2px solid #207a96;
+    
+} */
+
+
+/* Важная часть */
+.popup__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+
+
+
+

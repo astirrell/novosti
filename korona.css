@@ -1,0 +1,731 @@
+/* .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal.show{
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+}
+
+.modal .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.modal-window{
+    position: relative;
+    z-index: 2;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.4);
+    padding: 20px;
+}
+
+.btn-close{
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: none;
+    opacity: 0.7;
+}
+
+.btn-close:hover {
+    opacity: 1;
+} */
+
+.koronavirus{
+    
+}
+
+img{
+    filter: brightness(40%)
+}
+
+.koron1 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 290px;
+    margin: 10px;
+}
+.koron1 img {
+    object-fit: cover;
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.koron1 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.koron1 h2 {
+    color: #fff;
+}
+
+.korona1img{
+    object-fit: cover;
+}
+
+
+
+
+
+.koron2 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 500px;
+    margin: 10px;
+}
+.koron2 img {
+    object-fit: cover;
+    height: 380px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.koron2 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.koron2 h2 {
+    color: #fff;
+}
+.korona2img{
+    object-fit: cover;
+}
+
+
+
+.koron3 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 290px;
+    margin: 10px;
+}
+.koron3 img {
+    object-fit: cover;
+    height: 380px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.koron3 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.koron3 h2 {
+    color: #fff;
+}
+.korona3img{
+    object-fit: cover;
+}
+
+
+
+.koron4 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 690px;
+    margin: 10px;
+}
+.koron4 img {
+    object-fit: cover;
+    height: 380px;
+    width: 815px;
+    border-radius: 10px;
+}
+
+.koron4 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.koron4 h2 {
+    color: #fff;
+}
+.korona4img{
+    object-fit: cover;
+}
+
+
+
+
+.popup__bg1 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg1.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup1.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup1 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup1 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup1 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup1 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup1 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup1 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup1 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup1 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup1 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup1 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup__bg2 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg2.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup2.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup2 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup2 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup2 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup2 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup2 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup2 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup2 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup2 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup2 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup2 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup__bg3 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg3.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup3.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup3 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup3 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup3 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup3 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup3 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup3 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup3 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup3 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup3 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup3 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+
+.popup__bg4 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg4.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup4.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup4 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup4 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup4 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup4 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup4 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup4 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup4 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup4 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup4 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup4 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup4 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+

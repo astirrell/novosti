@@ -1,0 +1,513 @@
+
+img{
+    filter: brightness(40%)
+}
+
+.politika1 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 290px;
+    margin: 10px;
+}
+.politika1 img {
+    object-fit: cover;
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.politika1 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.politika1 h2 {
+    color: #fff;
+}
+.politika1img{
+    object-fit: cover;
+}
+
+
+
+
+.politika2 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 290px;
+    margin: 10px;
+}
+.politika2 img {
+    object-fit: cover;
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.politika2 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.politika2 h2 {
+    color: #fff;
+}
+.politika2img{
+    object-fit: cover;
+}
+
+.politika3 {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 290px;
+    margin: 10px;
+}
+.politika3 img {
+    object-fit: cover;
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.politika3 h2 {
+   left: 5px;
+   position: absolute; 
+   bottom: 0%;
+   width: 100%;
+   border-radius: 10px;
+}
+.politika3 h2 {
+    color: #fff;
+}
+.politika3img{
+    object-fit: cover;
+}
+
+/* .politika11{
+    float: left;
+} */
+
+
+
+.popup__bg1 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg1.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup1.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup1 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup1 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup1 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup1 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup1 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup1 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup1 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup1 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup1 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup1 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup__bg2 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg2.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup2.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup2 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup2 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup2 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup2 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup2 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup2 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup2 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup2 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup2 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup2 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup__bg3 {
+    font-family: 'Shizuru', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+     /*Скрываем фон и сам попап  */
+    pointer-events: none; 
+    /* Запрещаем ему быть целью событий */
+    transition: 0.5s all;
+}
+
+.popup__bg3.active { 
+     /* При добавлении класса 'active' */
+    opacity: 1;  
+    /* Показываем фон и попап */
+    pointer-events: all; 
+    /* Возвращаем события */
+    transition: 0.5s all;
+}
+
+.popup3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);  
+    /* Центрируем и масштабируем в 0 само окно */
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+/* При добавлении класса 'active' */
+.popup3.active {  
+    transform: translate(-50%, -50%) scale(1); 
+    /*  Так же центрируем и плавно увеличиваем  */
+    transition: 0.5s all;
+}
+
+
+
+
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.popup3 label {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popup3 .label__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+
+.popup3 input {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+
+.popup3 input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup3 input:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup3 textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.popup3 textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup3 textarea:focus + .label__text {
+    color: #2982ff;
+}
+
+.popup3 button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup3 button:hover {
+    background: #fff;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+

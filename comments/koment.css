@@ -1,0 +1,33 @@
+.koment{
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 6px;
+    width: 50%;
+    border:   2px solid black;
+}
+
+.koment > .name{
+    width: 70%;
+    float: left;
+    color: black;
+    font-size: 1.3em;
+    margin-left: 20px;
+}
+
+.koment > .message{
+    font-size: 1.1em;
+    float: left;
+    padding: 5px 0 0 10px;
+    color: black;
+}
+
+.koment > .name > .clock{
+    float: right;
+}
+.clock{
+    border:   2px solid black;
+    
+}
